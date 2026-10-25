@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeanDesk96 — DOS desktop experiment</title>
+  <meta name="description" content="Try Dean Edis's original DOS desktop experiment, preserved and running in a browser with its original windows, controls and beeps.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <main>
+    <header><h1>DeanDesk96</h1><p>My DOS desktop experiment, running again</p></header>
+    <div class="screen-wrap">
+      <canvas id="screen" width="640" height="480" tabindex="0" aria-label="Original DESK desktop. Use the mouse to move and resize windows, press buttons and use the sliders."></canvas>
+      <div id="start-panel"><button id="start" type="button">Start desktop</button><p>The original 1996 executable, running in your browser.</p></div>
+    </div>
+    <div class="toolbar">
+      <button id="restart" type="button" disabled>Restart desktop</button>
+      <button id="fullscreen" type="button" disabled>Full screen</button>
+      <span id="status" role="status">Ready to start</span>
+    </div>
+    <p class="help">Drag a title bar to move a window. Drag its lower-right corner to resize it. Try the buttons, color spinner and scrollbars. Right click anywhere in the desktop to quit. Use Restart desktop to bring back closed or minimized windows.</p>
+  </main>
+  <script src="vendor/js-dos/js-dos.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

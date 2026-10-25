@@ -1,0 +1,2 @@
+original/** -text whitespace=cr-at-eol
+vendor/** -text -diff

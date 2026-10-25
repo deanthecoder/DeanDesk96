@@ -1,0 +1,22 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #141722; color: #edf1fa; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1320px; margin: auto; padding: 20px; }
+header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 15px; }
+h1 { margin: 0; font-size: 24px; }
+header p { margin: 0; color: #b6bfd0; }
+.screen-wrap { position: relative; display: flex; justify-content: center; background: #000; }
+canvas { display: block; width: var(--screen-width, 640px) !important; height: var(--screen-height, 480px) !important; max-width: 100%; image-rendering: pixelated; outline: none; touch-action: none; }
+#start-panel { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; padding: 20px; background: #10151e; text-align: center; }
+#start-panel[hidden] { display: none; }
+#start-panel p { color: #adb7ca; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; padding: 14px 0; }
+button { font: inherit; font-size: 14px; border: 1px solid #63718a; border-radius: 4px; padding: 8px 14px; background: #303b50; color: inherit; cursor: pointer; }
+button:hover:enabled { background: #40516c; }
+button:disabled { opacity: .5; cursor: default; }
+#start { font-size: 17px; padding: 12px 22px; }
+#status, .help { color: #b9c3d4; }
+.help { margin: 0; font-size: 14px; line-height: 1.6; }
+.screen-wrap:fullscreen { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; }
+.screen-wrap:fullscreen canvas { width: min(100vw, 133.333vh) !important; height: min(75vw, 100vh) !important; }
+@media (max-width: 650px) { main { padding: 12px 8px; } header { gap: 5px 12px; } header p { font-size: 14px; } }
